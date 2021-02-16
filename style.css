@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
@@ -20,7 +21,9 @@ body {
 }
 
 .card {
-  min-height: 85vh;
+  transform-style: preserve-3d;
+  margin-top: 1rem;
+  min-height: 60vh;
   width: 35rem;
   border-radius: 30px;
   padding: 0rem 5rem;
@@ -29,14 +32,16 @@ body {
 
 .phone {
   /* background: lightgreen; */
-  min-height: 35vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.phone .img {
+  height: 35vh;
+}
 .info h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .info h3 {
@@ -55,17 +60,17 @@ body {
 
 .colors button {
   padding: 0.5rem 1.5rem;
-  background: none;
+  background: #ff6700;
   /* border: none; */
   box-shadow: rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  color: #585858;
+  /* color: #585858; */
 }
 
 button.active {
-  background: #585858;
+  background: #ff6700;
   color: white;
 }
 
