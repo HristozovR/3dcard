@@ -17,3 +17,43 @@ card.addEventListener('mouseleave', (e) => {
     img.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
+// const whiteButton = document.querySelector('.white');
+// whiteButton.addEventListener('click', () => {
+//     img.src = 'white.png';
+// })
+
+const buttons = document.querySelectorAll('div.colors button');
+// console.log(buttons);
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let classCheck = document.querySelector(".active");
+        if(classCheck !==null){
+         classCheck.className = '';
+        }
+        let checkButton = button.innerHTML.toLowerCase();
+        switch (checkButton) {
+            case 'black':
+                img.src = 'black.png';
+                button.classList.add('active');
+                button.classList.add('black');
+                break;
+            case 'white':
+                img.src = 'white.png';
+                button.classList.add('active');
+                button.classList.add('white');
+                break;
+            case 'red':
+                img.src = 'red.png';
+                button.classList.add('active');
+                button.classList.add('red');
+                break;
+            case 'blue':
+                img.src = 'blue.png';
+                button.classList.add('active');
+                button.classList.add('blue');
+                break;
+            default:
+                break;
+        }
+    })
+})
